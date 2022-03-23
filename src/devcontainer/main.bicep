@@ -7,9 +7,6 @@ param location string = deployment().location
 resource eirg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   location: location
   name: rgName
-  tags: {
-    Purpose: 'Dev'
-  }
 }
 
 // Azure Container Instance
