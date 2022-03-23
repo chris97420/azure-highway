@@ -65,7 +65,7 @@ resource devaci 'Microsoft.ContainerInstance/containerGroups@2021-10-01' = {
       {
         name: 'devcontainervolume'
         azureFile: {
-          shareName: devFileShare.name
+          shareName: 'devcontainer-volume'
           storageAccountName: devStorageAccount.name
           storageAccountKey: devStorageAccount.listKeys().keys[0].value
         }
