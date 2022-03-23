@@ -21,6 +21,7 @@ jobs:
       - name: deploy
         uses: azure/arm-deploy@v1
         with:
+          deploymentName: 'devcontainer'
           scope: 'subscription'
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           region: ${{ secrets.AZURE_RG_LOCATION }}
