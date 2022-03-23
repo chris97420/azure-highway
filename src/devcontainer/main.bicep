@@ -4,7 +4,7 @@ param rgName string
 param location string = deployment().location
 
 // Resource group
-resource eirg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
+resource rgDevContainer 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   location: location
   name: rgName
 }
@@ -12,6 +12,6 @@ resource eirg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
 // Azure Container Instance
 module devcontainer 'azurecontainer.bicep' = {
   name: 'aci-universal-devcontainer'
-  scope: eirg
+  scope: rgDevContainer
   params: {}
 }
