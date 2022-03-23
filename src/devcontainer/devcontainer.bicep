@@ -44,7 +44,7 @@ resource devaci 'Microsoft.ContainerInstance/containerGroups@2021-10-01' = {
           volumeMounts: [
             {
               name: 'devcontainervolume'
-              mountPath: '/'
+              mountPath: '/home/workspace'
             }
           ]
         }
