@@ -20,7 +20,6 @@ jobs:
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           region: ${{ secrets.AZURE_RG_LOCATION }}
-          resourceGroupName: ${{ secrets.AZURE_DEVCONTAINER_RG }}
           template: ./src/devcontainer/main.bicep
           parameters: rgname=${{ secrets.AZURE_DEVCONTAINER_RG }}
           failOnStdErr: false
