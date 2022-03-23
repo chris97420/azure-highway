@@ -9,8 +9,8 @@ resource rgDevContainer 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   name: rgName
 }
 
-// Azure Container Instance
-module devcontainer 'azurecontainer.bicep' = {
+// Azure Container Instance with storage mount
+module devcontainer 'devcontainer.bicep' = {
   name: 'aci-universal-devcontainer'
   scope: rgDevContainer
   params: {
