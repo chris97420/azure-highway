@@ -25,4 +25,4 @@ jobs:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
           region: ${{ secrets.AZURE_RG_LOCATION }}
           template: ./src/devcontainer/main.bicep
-          parameters: rgname=${{ secrets.AZURE_DEVCONTAINER_RG }}
+          parameters: rgName=${{ secrets.AZURE_DEVCONTAINER_RG }}
