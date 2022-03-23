@@ -5,10 +5,13 @@ on:
 
 name: Deploy Universal Dev Container to Azure Constainer Instance
 jobs:
-  build-and-deploy:
+  deploy-devcontainer:
     runs-on: ubuntu-latest
     environment: devsecops
     steps:
+      # Checkout code
+      - uses: actions/checkout@main
+    
       # Log into Azure
       - uses: azure/login@v1
         with:
