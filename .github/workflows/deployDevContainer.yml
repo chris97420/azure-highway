@@ -19,7 +19,7 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-          location: ${{ secrets.AZURE_RG_LOCATION }}
+          region: ${{ secrets.AZURE_RG_LOCATION }}
           resourceGroupName: ${{ secrets.AZURE_DEVCONTAINER_RG }}
           template: ./src/devcontainer/main.bicep
           parameters: rgname=${{ secrets.AZURE_DEVCONTAINER_RG }}
