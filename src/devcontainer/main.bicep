@@ -13,5 +13,7 @@ resource rgDevContainer 'Microsoft.Resources/resourceGroups@2021-04-01' = {
 module devcontainer 'azurecontainer.bicep' = {
   name: 'aci-universal-devcontainer'
   scope: rgDevContainer
-  params: {}
+  params: {
+    location: location
+  }
 }
