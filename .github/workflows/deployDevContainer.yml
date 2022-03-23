@@ -2,6 +2,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'src/devcontainer/**'
 
 name: Deploy Universal Dev Container to Azure Constainer Instance
 jobs:
