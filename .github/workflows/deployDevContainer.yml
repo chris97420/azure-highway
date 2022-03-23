@@ -1,13 +1,15 @@
-on: [push]
+on:
+  push:
+    branches:
+      - main
+
 name: Deploy Universal Dev Container to Azure Constainer Instance
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    environment: devsecops
     steps:
-      # Checkout code
-      - uses: actions/checkout@main
-
-        # Log into Azure
+      # Log into Azure
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
