@@ -73,5 +73,3 @@ resource devaci 'Microsoft.ContainerInstance/containerGroups@2021-10-01' = {
     ]
   }
 }
-
-output devContainerIPv4Address string = devaci.properties.ipAddress.ip
